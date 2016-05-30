@@ -1,0 +1,15 @@
+<article class="photo">
+  <h1>
+    <a href="{{photo.flickrUrl}}">
+      <span class="main-photo">
+        <span class="photo-fader">
+          <img src="{{photo.imgUrl}}" alt="" class="main-photo-img"/>
+        </span>
+      </span>
+      <span class="title">{{photo.title}}</span>
+    </a>
+  </h1>
+  {{#if photo.description}}
+    <p class="description">{{{photo.description}}}</p>
+  {{/if}}
+</article>
