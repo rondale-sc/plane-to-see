@@ -21,5 +21,14 @@
     <script src="assets/sw-planes.js"></script>
 
     {{content-for "body-footer"}}
+
+
+    <script>
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('./service-worker.js', {scope: './'}).catch(function(error) {
+          alert('Error registering service worker:'+error);
+        });
+      }
+    </script>
   </body>
 </html>
