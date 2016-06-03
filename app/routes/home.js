@@ -1,8 +1,16 @@
 import Ember from 'ember';
-import { search } from 'sw-planes/utils/flickr-search';
+
+const { get } = Ember;
 
 export default Ember.Route.extend({
+  flickrSearch: Ember.inject.service(),
   model() {
-    return search('airplane terminals');
+    let service = get(this, 'flickrSearch');
+    return service.search('airplane terminals', () => {
+      this.onSearch();
+    });
+  },
+  onSearch() {
+    this.refresh();
   }
 });

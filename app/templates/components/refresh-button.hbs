@@ -1,0 +1,11 @@
+<div class="container">
+  <div class="inner">
+    <!-- {{log isLoading}} -->
+    <button {{ action 'refresh' }} class="custom refresh {{ if isLoading 'loading' }}">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+        <circle cx="50" r="40" cy="50"/>
+        <path d="M99.7.658v43.5h-44.4z"/>
+      </svg>
+    </button>
+  </div>
+</div>
