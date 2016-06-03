@@ -16,7 +16,8 @@
  */
 
 // overall structure
-  body {
+  body > .ember-view {
+    height: 100%;
     @include display-flex;
     @include flex-flow(column);
   }
