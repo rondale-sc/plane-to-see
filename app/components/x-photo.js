@@ -8,7 +8,7 @@ export default Ember.Component.extend({
       }
     });
   },
-  willDestroy() {
+  willDestroyElement() {
     this.$().off('load');
   }
 });
